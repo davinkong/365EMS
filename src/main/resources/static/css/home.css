@@ -1,0 +1,29 @@
+body{
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.quickLinks{
+    text-align: center;
+    color: rebeccapurple;
+    list-style-type: none;
+    font-family: "American Typewriter";
+    font-size: large;
+}
+.quickLink:hover{
+    font-size: xx-large;
+}
+footer {
+    margin-top: auto;
+    padding: 10px 20px;
+    background: #666;
+    color: white;
+}
+img {
+    display: block;
+}
+
+card{
+    background-color: lightblue;
+}
