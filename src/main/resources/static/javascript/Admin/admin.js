@@ -1,7 +1,14 @@
+//Cookie
+const cookieArr = document.cookie.split("=")
+const employeeId = cookieArr[1];
+if (employeeId == null){
+    window.location.replace("http://localhost:8080/html/login.html");
+    window.alert("You are not authorized to access this page...");
 
-let ifEmpty = document.getElementById("list-all");
-
-if (ifEmpty == null){
-    //alert("No Requests")
-    document.write("<h2 style='text-align: center'>No Requests at this time...</h2>")
+}
+function handleLogout(){
+    let c = document.cookie.split(";");
+    for(let i in c){
+        document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    }
 }

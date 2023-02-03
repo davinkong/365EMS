@@ -29,7 +29,7 @@ const handleSubmit = async (e)=>{
 
 
     if(response.status === 200){
-        document.cookie = `employeeId=${responseArr[1]}`
+        document.cookie = `employeeId=${responseArr[1]}; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT`
         window.location.replace(responseArr[0])
 
     }else{

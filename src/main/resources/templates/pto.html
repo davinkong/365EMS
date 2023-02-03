@@ -20,10 +20,10 @@
             <div class="card-body">
                 <h5 class="card-title">Requested:</h5>
                 <p class="card-text text-danger" th:text="${pto.ptoRequestAmount}"></p>
-                <label>From: <p class="card-text text-primary" th:text="${#dates.format(pto.ptoFrom, 'MM/dd/yyyy')}"></p></label>
+                <p class="card-text text-primary" th:text="'From: '+ ${#dates.format(pto.ptoFrom, 'MM/dd/yyyy')}"></p>
                 <br>
-                <label>To: <p class="card-text text-primary" th:text="${#dates.format(pto.ptoTo, 'MM/dd/yyyy')}"></p></label>
-                <br>
+                <p class="card-text text-primary" th:text="'To: '+ ${#dates.format(pto.ptoTo, 'MM/dd/yyyy')}"></p>
+
                 <a th:href="@{/approve/{id}(id=${pto.id})}"
                        class="btn btn-success">Approve</a>
 
@@ -33,11 +33,11 @@
             </div>
             <br>
 
-            <div>Approved FTO: <h7 class="card-text text-info" th:text="${pto.ptoApproved}"> </h7></div>
+            <div class="card-footer"> Approved FTO: <h7 class="card-text text-approve" th:text="${pto.ptoApproved}"> </h7></div>
         </div>
     </div>
 </div>
-<script src="/javascript/Admin/admin.js" type="application/javascript"></script>
+<script src="/javascript/Admin/adminPto.js" type="application/javascript"></script>
 
 
 </body>

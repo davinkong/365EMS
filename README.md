@@ -1,6 +1,7 @@
 # 365EMS
 Capstone project
-365 Employee Management System. Using:                                                                                                                           																																														                                
+365 Employee Management System. 
+Using:                                                                                                                           																																														                                
   Java,                                                                                                                 																	
   Spring boot, 
   Thymeleaf, 

@@ -1,6 +1,6 @@
 body{
-    background-color: lavender;
-    display: flex;
+    background: lavender;
+    background: linear-gradient(to right,mediumpurple,plum,lavender, plum, lavender, mediumpurple);    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -26,4 +26,7 @@ img {
 
 card{
     background-color: lightblue;
+}
+.card{
+    width: 300px;
 }

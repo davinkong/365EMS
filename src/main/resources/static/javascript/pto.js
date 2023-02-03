@@ -20,6 +20,10 @@ const headers = {
 
 const baseUrl = "http://localhost:8080/api/v1/pto"
 
+if (employeeId == null){
+    window.alert("You are not authorized to access this page...");
+    window.location.replace("http://localhost:8080/html/login.html");
+}
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
@@ -118,9 +122,9 @@ const populateModal = (obj) =>{
     noteBody.innerText = ''
     noteBody.innerText = obj.ptoRequestAmount
     noteBody.innerText = ''
-    noteBody.innerText = obj.startDate
+    noteBody.innerText = obj.ptoFrom
     noteBody.innerText = ''
-    noteBody.innerText = obj.endDate
+    noteBody.innerText = obj.ptoTo
     updateNoteBtn.setAttribute('data-note-id', obj.id)
 }
 

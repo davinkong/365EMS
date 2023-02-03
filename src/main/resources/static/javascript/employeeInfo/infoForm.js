@@ -22,6 +22,11 @@ const headers = {
 }
 
 const baseUrl = "http://localhost:8080/api/v1/info/"
+
+if (employeeId == null){
+    window.alert("You are not authorized to access this page...");
+    window.location.replace("http://localhost:8080/html/login.html");
+}
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
@@ -150,20 +155,45 @@ const postInformation = (array) => {
         infoForm.innerHTML = `
             <div class="form-group">
        
-                <div class="card-body d-flex flex-column  justify-content-between" style="height: available">
-                    <p class="card-text"><strong>Name: </strong>${obj.firstName} ${obj.lastName} </p>
-                    <p class="card-text"><strong>Email: </strong>${obj.email}</p>   
-                    <p class="card-text"><strong>Street: </strong>${obj.street}</p>
-                    <p class="card-text"><strong>City: </strong>${obj.city}</p>
-                    <p class="card-text"><strong>State: </strong>${obj.state}</p>
-                    <p class="card-text"><strong>Zip Code: </strong>${obj.zipCode}</p>
-                    <p class="card-text"><strong>Phone number: </strong>${obj.phoneNumber}</p>
-
-                    <div class="d-flex justify-content-between">
-                        <button onclick="getInfoById(${obj.id})" type="button" class="btn btn-primary"
-                        data-bs-toggle="modal" data-bs-target="#info-edit-modal">
-                        Edit address
-                        </button>
+                <div class="card">
+                    <div class="header">
+                        <h2 style="text-align: center">${obj.firstName} ${obj.lastName} </h2>
+                    </div>
+                    <div class="body">
+                        <table class="table">
+                            <tr>
+                                <th>Email:</th>
+                                <td>${obj.email}</td>
+                            </tr>
+                            <tr>
+                                <th>Street:</th>
+                                <td>${obj.street}</td>
+                            </tr>
+                            <tr>
+                                <th>City:</th>
+                                <td>${obj.city}</td>
+                            </tr>
+                            <tr>
+                                <th>State:</th>
+                                <td>${obj.state}</td>
+                            </tr>
+                            <tr>
+                                <th>Zip Code:</th>
+                                <td>${obj.zipCode}</td>
+                            </tr>
+                            <tr>
+                                <th>Phone number:</th>
+                                <td>${obj.phoneNumber}</td>
+                            </tr>
+        
+                            
+                        </table>
+                        <div class="d-flex justify-content-between">
+                                <button onclick="getInfoById(${obj.id})" type="button" class="btn btn-edit"
+                                data-bs-toggle="modal" data-bs-target="#info-edit-modal">
+                                Edit address
+                                </button>
+                        </div>
                     </div>
                 </div>
             </div>

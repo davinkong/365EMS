@@ -45,13 +45,17 @@
             <td th:text="${info.zipCode}"></td>
             <td class="delete-btn">
                 <a th:href="@{deleteEmp/{employeeId}(employeeId=${listEmployees[iterStat.index].id})}"
-                   class="waves-effect waves-light btn red litghten-2">Delete</a>
+                   class="waves-effect waves-light btn red litghten-2"
+                   th:data-confirm-delete="|Are you sure you want to delete employee: ${info.firstName}?|"
+                   onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false"
+                >Delete</a>
             </td>
         </tr>
 
 
 
 </table>
+<script src="/javascript/Admin/admin.js" type="application/javascript"></script>
 
 </body>
 </html>

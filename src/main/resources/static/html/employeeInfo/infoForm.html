@@ -5,7 +5,7 @@
     <title>Information Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/css/home.css" type="text/css">
+    <link rel="stylesheet" href="/css/employeePage.css" type="text/css">
 </head>
 <body>
 <!--Navbar-->
@@ -45,42 +45,49 @@
     </div>
 </nav>
 <h2 class="text-center" style="max-width: 960px; margin: 16px auto; padding: 16px">Employee Information Form</h2>
-<div class="container" id="home-container" >
+<div class="container-form" id="home-container" >
     <div id="info-form-container" >
         <form id="info-form" aria-hidden="true">
             <div class="form-group">
-                <label for="first-name-input">FirstName </label>
-                <input class="form-control" id="first-name-input" placeholder="FirstName" rows="5">
+                <label for="first-name-input"> FirstName </label>
+                <input class="form-control" id="first-name-input" placeholder="FirstName" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="last-name-input">LastName </label>
-                <input class="form-control" id="last-name-input" placeholder="LastName" rows="5">
+                <label for="last-name-input"> LastName </label>
+                <input class="form-control" id="last-name-input" placeholder="LastName" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="email-input">Email </label>
-                <input class="form-control" id="email-input" placeholder="Email" rows="5">
+                <label for="email-input"> Email </label>
+                <input class="form-control" id="email-input" placeholder="Email" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="street-input">Street </label>
-                <input class="form-control" id="street-input" placeholder="Street" rows="5">
+                <label for="street-input"> Street </label>
+                <input class="form-control" id="street-input" placeholder="Street" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="city-input">City </label>
-                <input class="form-control" id="city-input" placeholder="City" rows="5">
+                <label for="city-input"> City </label>
+                <input class="form-control" id="city-input" placeholder="City" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="state-input">State </label>
-                <input class="form-control" id="state-input" placeholder="State" rows="5">
+                <label for="state-input"> State </label>
+                <input class="form-control" id="state-input" placeholder="State" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="zip-code-input">Zip Code </label>
-                <input class="form-control" id="zip-code-input" placeholder="Zip Code" rows="5">
+                <label for="zip-code-input"> Zip Code </label>
+                <input class="form-control" id="zip-code-input" placeholder="Zip Code" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="phone-input">Phone Number </label>
-                <input class="form-control" id="phone-input" placeholder="Phone Number" rows="5">
+                <label for="phone-input"> Phone Number </label>
+                <input class="form-control" id="phone-input" placeholder="Phone Number" required>
             </div>
-
+            <br>
             <button  id="submit-button" type="submit" class="btn btn-primary mt-1" >Submit</button>
         </form>
         <div id="info-container" class="container-fluid"></div>
@@ -99,23 +106,23 @@
 
             <div class="modal-body d-flex">
                 <label for="street-info">Street </label>
-                <input class="form-control" id="street-info" placeholder="Street" rows="5">
+                <input class="form-control" id="street-info" placeholder="Street" rows="5" required>
             </div>
             <div class="modal-body d-flex">
                 <label for="city-info">city </label>
-                <input class="form-control" id="city-info" placeholder="city" rows="5">
+                <input class="form-control" id="city-info" placeholder="city" rows="5" required>
             </div>
             <div class="modal-body d-flex">
                 <label for="state-info">state </label>
-                <input class="form-control" id="state-info" placeholder="state" rows="5">
+                <input class="form-control" id="state-info" placeholder="state" rows="5" required>
             </div>
             <div class="modal-body d-flex">
                 <label for="zip-code-info">zip-code </label>
-                <input class="form-control" id="zip-code-info" placeholder="zip-code" rows="5">
+                <input class="form-control" id="zip-code-info" placeholder="zip-code" rows="5" required>
             </div>
             <div class="modal-body d-flex">
                 <label for="phone-info">phone-info </label>
-                <input class="form-control" id="phone-info" placeholder="phone-info" rows="5">
+                <input class="form-control" id="phone-info" placeholder="phone-info" rows="5" required>
             </div>
 
 
