@@ -1,0 +1,97 @@
+
+body{
+    background: lavender;
+    background: linear-gradient(to right,mediumpurple,plum,lavender, plum, lavender, mediumpurple);
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.card {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    background: grey;
+    background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+    position: absolute;
+    height: 50px;
+    width: 95%;
+    margin:0 auto;
+    left: 0;
+    right: 0;
+    top: -10px;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, cornflowerblue,lightblue,cornflowerblue);
+}
+
+
+.header div{
+    position: absolute;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    top: 30px;
+    left: 50px;
+}
+.btn-edit{
+    background: blueviolet;
+    position: absolute;
+    font-size: 26px;
+    font-weight: 600;
+    top: 300px;
+    left: 150px;
+}
+.header p{
+    position: absolute;
+    color: black;
+    font-size: medium;
+}
+
+.body, table {
+    position: absolute;
+    height: 126px;
+    left: 5px;
+    right: 5px;
+    top: 10%;
+    border-radius: 12px;
+}
+
+.body table {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+
+}
+
+
+ tr :hover {
+    background-color: lightpink;
+    cursor: pointer;
+}
+
+
+
+.modal-content{
+    background: lavender;
+    background: linear-gradient(to right,lightblue, lightskyblue, cornflowerblue);
+    height: 700px;
+    width: 500px;
+}
+
+/*employee form page*/
+.container-form{
+    height: 750px;
+    width: 600px;
+    background: grey;
+    background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

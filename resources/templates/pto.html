@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FTO Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/admin.css" type="text/css">
+
+</head>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+    <a th:href="@{/admin}" class="btn btn-dark btn-lg">Back to Admin Page</a>
+    </div>
+</nav>
+<body >
+
+<div class="row" th:fragment="list" xmlns:th="http://www.thymeleaf.org" style="max-width: 960px; margin: 16px auto; padding: 16px">
+    <div th:each="pto, stat : ${listEmployeesPto}" class="col-sm-4" id="list-all">
+        <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Requested:</h5>
+                <p class="card-text text-danger" th:text="${pto.ptoRequestAmount}"></p>
+                <p class="card-text text-primary" th:text="'From: '+ ${#dates.format(pto.ptoFrom, 'MM/dd/yyyy')}"></p>
+                <br>
+                <p class="card-text text-primary" th:text="'To: '+ ${#dates.format(pto.ptoTo, 'MM/dd/yyyy')}"></p>
+
+                <a th:href="@{/approve/{id}(id=${pto.id})}"
+                       class="btn btn-success">Approve</a>
+
+                    <a th:href="@{/delete/{id}(id=${pto.id})}"
+                           class="btn btn-danger">Disapprove</a>
+
+            </div>
+            <br>
+
+            <div class="card-footer"> Approved FTO: <h7 class="card-text text-approve" th:text="${pto.ptoApproved}"> </h7></div>
+        </div>
+    </div>
+</div>
+<script src="/javascript/Admin/adminPto.js" type="application/javascript"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

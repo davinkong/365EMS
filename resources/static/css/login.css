@@ -1,0 +1,18 @@
+body{
+    background: lavender;
+    background: linear-gradient(to right,lightpink,plum,lavender, plum, lavender);
+
+}
+.container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background: grey;
+    background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn-register{
+    background: plum;
+}
