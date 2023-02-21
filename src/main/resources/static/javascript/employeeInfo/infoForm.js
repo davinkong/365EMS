@@ -157,14 +157,12 @@ const postInformation = (array) => {
        
                 <div class="card">
                     <div class="header">
-                        <h2 style="text-align: center">${obj.firstName} ${obj.lastName} </h2>
+                        <h1 style="text-align: center">${obj.firstName} ${obj.lastName} </h1>
+                        <h5 style="text-align: center">${obj.email}</h5>
                     </div>
                     <div class="body">
                         <table class="table">
-                            <tr>
-                                <th>Email:</th>
-                                <td>${obj.email}</td>
-                            </tr>
+                       
                             <tr>
                                 <th>Street:</th>
                                 <td>${obj.street}</td>
@@ -183,7 +181,7 @@ const postInformation = (array) => {
                             </tr>
                             <tr>
                                 <th>Phone number:</th>
-                                <td>${obj.phoneNumber}</td>
+                                <td>${obj.phoneNumber.toString().substring(0,3)}-${obj.phoneNumber.toString().substring(3,6)}-${obj.phoneNumber.toString().substring(6)}</td>
                             </tr>
         
                             

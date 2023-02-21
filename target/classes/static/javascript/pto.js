@@ -12,7 +12,7 @@ let noteBody = document.getElementById(`note-body`)
 let updateNoteBtn = document.getElementById('update-note-button')
 
 
-
+const dFrom = new Date();
 
 const headers = {
     'Content-Type': 'application/json'
@@ -20,12 +20,16 @@ const headers = {
 
 const baseUrl = "http://localhost:8080/api/v1/pto"
 
+if (employeeId == null){
+    window.alert("You are not authorized to access this page...");
+    window.location.replace("http://localhost:8080/html/login.html");
+}
 const handleSubmit = async (e) => {
     e.preventDefault()
     let bodyObj = {
         ptoRequestAmount: document.getElementById("note-input").value,
-        ptoFrom: document.getElementById("date-from").value,
-        ptoTo: document.getElementById("date-to").value,
+        ptoFrom: document.getElementById("date-from").value.Date,
+        ptoTo: document.getElementById("date-to").value.Date,
         ptoApproved: 0
     }
     await requestPto(bodyObj);
@@ -118,9 +122,9 @@ const populateModal = (obj) =>{
     noteBody.innerText = ''
     noteBody.innerText = obj.ptoRequestAmount
     noteBody.innerText = ''
-    noteBody.innerText = obj.startDate
+    noteBody.innerText = obj.ptoFrom
     noteBody.innerText = ''
-    noteBody.innerText = obj.endDate
+    noteBody.innerText = obj.ptoTo
     updateNoteBtn.setAttribute('data-note-id', obj.id)
 }
 

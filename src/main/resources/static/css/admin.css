@@ -1,9 +1,13 @@
-body{
-    background: lavender;
-    background: linear-gradient(to right,mediumpurple,plum,lavender, plum, lavender, mediumpurple);
+body {
+   background: url("admin.jpg");
+   background-size: cover;
+
 
 }
-
+.table{
+    width: 100%;
+    table-layout: auto;
+}
 .fto-link:hover{
     font-size: large;
     color: sienna;

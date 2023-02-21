@@ -11,7 +11,7 @@ body{
     height: 500px;
     width: 500px;
     background: grey;
-    background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);
+    background: linear-gradient(to right,lightslategray,darkgrey,lightslategray,darkgrey, grey);
     margin: 40px auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -19,14 +19,16 @@ body{
 
 .header {
     position: absolute;
-    height: 50px;
+    height: 100px;
     width: 95%;
     margin:0 auto;
     left: 0;
     right: 0;
     top: -10px;
     border-radius: 12px;
-    background-image: linear-gradient(to right, cornflowerblue,lightblue,cornflowerblue);
+    background: linear-gradient(to right,lightslategray,darkgrey,grey,darkgrey, grey);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -39,13 +41,20 @@ body{
     left: 50px;
 }
 .btn-edit{
-    background: blueviolet;
+    background: linear-gradient(to right, lightblue,cornflowerblue,lightblue);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     font-size: 26px;
     font-weight: 600;
     top: 300px;
     left: 150px;
 }
+.btn-pto{
+    background: linear-gradient(to right, lightskyblue,lightpink,lightblue);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
 .header p{
     position: absolute;
     color: black;
@@ -54,10 +63,10 @@ body{
 
 .body, table {
     position: absolute;
-    height: 126px;
+    height: 150px;
     left: 5px;
     right: 5px;
-    top: 10%;
+    top: 20%;
     border-radius: 12px;
 }
 
@@ -72,7 +81,7 @@ body{
 
 
  tr :hover {
-    background-color: lightpink;
+    background: linear-gradient(to right, lightskyblue,lightpink,lightblue);
     cursor: pointer;
 }
 
@@ -85,13 +94,3 @@ body{
     width: 500px;
 }
 
-/*employee form page*/
-.container-form{
-    height: 750px;
-    width: 600px;
-    background: grey;
-    background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);
-    margin: 40px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}

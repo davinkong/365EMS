@@ -89,24 +89,39 @@ const createNoteCards = (array) => {
         let noteCard = document.createElement("div")
         noteCard.classList.add("m-2")
         noteCard.innerHTML = `
-<!--            <div class="form-group" style="max-width: 960px; margin: 16px auto; padding: 16px">-->
-                <div class="row">
-                     <div class="col-sm-3">
-                        <div class="card" >
-                            <div class="card-body flex-column  justify-content-between" style="height: available">
-                                <p class="card-text text-danger">Request Pending: <strong>-${obj.ptoRequestAmount}</strong> </p>
-                                <p class="card-text text-success">Aprroved PTO amount: <strong>${obj.ptoApproved}</strong></p>
-                                <p class="card-text text-info">From: <strong>${obj.ptoFrom.toString().substring(0, 10)}</strong></p>
-                                <p class="card-text text-info">To:   <strong>${obj.ptoTo.toString().substring(0, 10)}</strong></p>
 
+                <div class="column">
+                        <div class="card" >
+                            <div class="container justify-content-between">
+                            <table>
+                            <br>
+                                    <tr>
+                                        <th class="text-danger">Pending:</th>
+                                        <td class="text-danger">-${obj.ptoRequestAmount}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-success">Aprroved:</th>
+                                        <td class="text-success">${obj.ptoApproved}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>From:</th>
+                                        <td>${obj.ptoFrom.toString().substring(5, 7)}/${obj.ptoFrom.toString().substring(8, 10)}/${obj.ptoFrom.toString().substring(0, 4)}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>To:</th>
+                                        <td>${obj.ptoTo.toString().substring(5, 7)}/${obj.ptoTo.toString().substring(8, 10)}/${obj.ptoTo.toString().substring(0, 4)}</td>
+                                    </tr>
+                            </table>
+     
+                                <br>
                                 <div class="d-flex justify-content-between">
-                                <button class="btn btn-danger" onclick="handleDelete(${obj.id})">Cancel Request</button>  
+                                <button class="btn btn-danger" style="text-align: center" onclick="handleDelete(${obj.id})">Cancel Request</button>  
                                 </div>
+                                <br>
                             </div>
                         </div>
-                     </div>
                 </div>
-<!--            </div>-->
+
         `
         noteContainer.append(noteCard);
     })

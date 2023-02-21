@@ -17,7 +17,8 @@
 </a>
 <br>
 <br>
-<h3>Employee List</h3>
+<h1 style="text-align: center">Manager Page</h1>
+<br>
 <table class="table table-striped" >
 <thead>
     <tr>
@@ -29,6 +30,7 @@
         <th>City</th>
         <th>State</th>
         <th>Zip Code</th>
+        <th>Phone Number</th>
     </tr>
 </thead>
 
@@ -43,6 +45,7 @@
             <td th:text="${info.city}"></td>
             <td th:text="${info.state}"></td>
             <td th:text="${info.zipCode}"></td>
+            <td th:text="${info.phoneNumber.toString().substring(0, 3)} + '-' + ${info.phoneNumber.toString().substring(3, 6)} + '-' + ${info.phoneNumber.toString().substring(6)}"></td>
             <td class="delete-btn">
                 <a th:href="@{deleteEmp/{employeeId}(employeeId=${listEmployees[iterStat.index].id})}"
                    class="waves-effect waves-light btn red litghten-2"

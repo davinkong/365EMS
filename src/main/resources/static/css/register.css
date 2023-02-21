@@ -1,17 +1,20 @@
 body{
-    background: lavender;
-    background: linear-gradient(to right,lightpink,plum,lavender, plum, lavender);
+    background: rgba(215, 210, 210, 0.95) url("diversity1.jpg") center bottom no-repeat fixed;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    background-size: cover;
 
 }
 .container-md{
     position: relative;
-    height: 550px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     background: grey;
     background: linear-gradient(to right,darkgrey,lightslategray,darkgrey, grey);    margin: 40px auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .btn-login{
-    background: plum;
+    background: yellow;
 }
